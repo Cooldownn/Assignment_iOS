@@ -476,7 +476,7 @@
         <scene sceneID="wL8-hk-F95">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sjh-5o-vYu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weather" image="reminder_icon" selectedImage="reminder_icon" id="xjg-nE-vX6"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="weathericon" selectedImage="weathericon" id="xjg-nE-vX6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gn9-7g-CWM">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -489,7 +489,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Js1-Hi-Pb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-800" y="492"/>
+            <point key="canvasLocation" x="-826" y="492"/>
         </scene>
         <!--Item-->
         <scene sceneID="Xrb-lp-CTY">
@@ -1102,7 +1102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherVC" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-on-yMM" userLabel="Background Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather1" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-on-yMM" userLabel="Background Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iv2-Z9-WuW" userLabel="Change City Button">
@@ -1115,33 +1115,33 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="t1w-4O-E4a" kind="presentation" identifier="changeCityName" id="2oK-hW-9if"/>
+                                    <segue destination="t1w-4O-E4a" kind="presentation" identifier="changeCitySegue" id="2oK-hW-9if"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLD-ZR-shn" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="213" width="414" height="454"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-6r-SZJ" userLabel="Temperature Label">
-                                        <rect key="frame" x="146" y="0.0" width="168" height="127"/>
+                                        <rect key="frame" x="123" y="0.0" width="168" height="127"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="168" id="7gX-MW-82h"/>
                                             <constraint firstAttribute="height" constant="127" id="TwR-Sp-NXt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="100"/>
-                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="100"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6sp-as-sFe" userLabel="Weather Condition Image View">
                                         <rect key="frame" x="16" y="129" width="382" height="229"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbO-Z6-4FR" userLabel="City Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ho Chi Minh City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbO-Z6-4FR" userLabel="City Label">
                                         <rect key="frame" x="16" y="360" width="269" height="94"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="94" id="XY6-t5-FLG"/>
                                             <constraint firstAttribute="width" constant="269" id="zG2-wX-EDe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="33"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1152,8 +1152,8 @@
                                     <constraint firstAttribute="trailing" secondItem="6sp-as-sFe" secondAttribute="trailing" constant="16" id="Bfp-FO-Fei"/>
                                     <constraint firstItem="DbO-Z6-4FR" firstAttribute="leading" secondItem="xLD-ZR-shn" secondAttribute="leading" constant="16" id="bjd-lb-QRo"/>
                                     <constraint firstItem="DbO-Z6-4FR" firstAttribute="top" secondItem="6sp-as-sFe" secondAttribute="bottom" constant="2" id="hmY-l0-1aE"/>
-                                    <constraint firstAttribute="trailing" secondItem="fhU-6r-SZJ" secondAttribute="trailing" constant="100" id="k7S-Xc-qMa"/>
                                     <constraint firstAttribute="height" constant="454" id="n8E-ge-tUN"/>
+                                    <constraint firstItem="fhU-6r-SZJ" firstAttribute="centerX" secondItem="xLD-ZR-shn" secondAttribute="centerX" id="ygN-Cn-l97"/>
                                     <constraint firstItem="6sp-as-sFe" firstAttribute="leading" secondItem="xLD-ZR-shn" secondAttribute="leading" constant="16" id="zXq-GJ-GAE"/>
                                 </constraints>
                             </view>
@@ -1195,7 +1195,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="31K-gP-G9M" userLabel="Background Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="changecity" translatesAutoresizingMaskIntoConstraints="NO" id="31K-gP-G9M" userLabel="Background Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -1239,12 +1239,12 @@
                                     <constraint firstItem="ZXJ-FW-Ba8" firstAttribute="top" secondItem="wl3-Kr-rQc" secondAttribute="top" constant="28" id="0mk-mb-MpT"/>
                                     <constraint firstItem="ZXJ-FW-Ba8" firstAttribute="leading" secondItem="wl3-Kr-rQc" secondAttribute="leading" constant="16" id="2sy-sj-MYu"/>
                                     <constraint firstItem="3h4-ZG-RZe" firstAttribute="top" secondItem="t85-jI-lez" secondAttribute="bottom" constant="20" id="6hy-IJ-5i8"/>
-                                    <constraint firstAttribute="centerX" secondItem="t85-jI-lez" secondAttribute="centerX" id="8XU-XH-7i0"/>
                                     <constraint firstAttribute="bottom" secondItem="3h4-ZG-RZe" secondAttribute="bottom" id="AVO-Zt-raE"/>
                                     <constraint firstAttribute="trailing" secondItem="3h4-ZG-RZe" secondAttribute="trailing" constant="12" id="CRS-mb-o0e"/>
                                     <constraint firstAttribute="height" constant="221" id="OAT-IW-7iZ"/>
                                     <constraint firstItem="t85-jI-lez" firstAttribute="leading" secondItem="wl3-Kr-rQc" secondAttribute="leading" constant="93" id="ZYF-23-pJ5"/>
                                     <constraint firstItem="3h4-ZG-RZe" firstAttribute="leading" secondItem="wl3-Kr-rQc" secondAttribute="leading" constant="12" id="eWP-zj-MR9"/>
+                                    <constraint firstItem="t85-jI-lez" firstAttribute="top" secondItem="wl3-Kr-rQc" secondAttribute="top" constant="141" id="nmp-lG-cSC"/>
                                     <constraint firstAttribute="trailing" secondItem="t85-jI-lez" secondAttribute="trailing" constant="93" id="vaK-Sr-H1d"/>
                                 </constraints>
                             </view>
@@ -1263,7 +1263,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="U8D-eA-BDc"/>
                     <connections>
-                        <outlet property="changeCityTextField" destination="t85-jI-lez" id="Spi-yH-fZp"/>
+                        <outlet property="textField" destination="t85-jI-lez" id="Spi-yH-fZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECC-Cn-kaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1273,12 +1273,13 @@
     </scenes>
     <resources>
         <image name="Board" width="1078" height="1068"/>
-        <image name="WeatherVC" width="236" height="418"/>
         <image name="alam_icon" width="25" height="25"/>
+        <image name="changecity" width="564" height="1002"/>
         <image name="left" width="32" height="32"/>
         <image name="playagain" width="775" height="215"/>
-        <image name="reminder_icon" width="25" height="25"/>
         <image name="switch" width="64" height="64"/>
+        <image name="weather1" width="564" height="1002"/>
+        <image name="weathericon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p7D-I9-eTP"/>

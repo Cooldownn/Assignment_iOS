@@ -7,92 +7,51 @@
 //
 
 import UIKit
+import CoreLocation
 
-class WeatherVC: UIViewController {
-    
-    //Constants
-    let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    let APP_ID = "e143f386ee9382add79222f7855a46ef"
-    
-    //TODO: Declare instance variables here
+class WeatherVC: UIViewController, CLLocationManagerDelegate {
     
     
-    
-    //Pre-linked IBOutlets
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
     
+    // Constants
+    let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
+    let APP_ID = "e143f386ee9382add79222f7855a46ef"
+    
+    let locationManager = CLLocationManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //TODO:Set up the location manager here.
-        
-        
-        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
+    // Update Location
     
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[locations.count - 1]
+        if location.horizontalAccuracy > 0 {
+            locationManager.stopUpdatingLocation()
+            
+            print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
+            
+            let latitude = String(location.coordinate.latitude)
+            let longitude = String(location.coordinate.longitude)
+            
+            let weather: [String: String] = ["lat": latitude, "lon": longitude, "appid": APP_ID]
+        }
+    }
     
-    //MARK: - Networking
-    /***************************************************************/
-    
-    //Write the getWeatherData method here:
-    
-    
-    
-    
-    
-    
-    
-    //MARK: - JSON Parsing
-    /***************************************************************/
-    
-    
-    //Write the updateWeatherData method here:
-    
-    
-    
-    
-    
-    //MARK: - UI Updates
-    /***************************************************************/
-    
-    
-    //Write the updateUIWithWeatherData method here:
-    
-    
-    
-    
-    
-    
-    //MARK: - Location Manager Delegate Methods
-    /***************************************************************/
-    
-    
-    //Write the didUpdateLocations method here:
-    
-    
-    
-    //Write the didFailWithError method here:
-    
-    
-    
-    
-    
-    //MARK: - Change City Delegate methods
-    /***************************************************************/
-    
-    
-    //Write the userEnteredANewCityName Delegate method here:
-    
-    
-    
-    //Write the PrepareForSegue Method here
-    
-    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+        cityLabel.text = "Unable to determine your location"
+    }
     
     
     

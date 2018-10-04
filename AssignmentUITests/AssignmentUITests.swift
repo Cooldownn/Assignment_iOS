@@ -9,7 +9,7 @@
 import XCTest
 
 class AssignmentUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
         
@@ -19,7 +19,7 @@ class AssignmentUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
+        
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
@@ -65,5 +65,104 @@ class AssignmentUITests: XCTestCase {
         cell1.element(boundBy: cell1.count-1).buttons["Delete"].tap()
         
     }
-    
+    func testDisplaySoundName(){
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["Sound"].tap()
+        
+        //Assert that we are displaying the tableView
+        let soundTableView = app.tables["table--soundNames"]
+        
+        XCTAssert(soundTableView.exists, "The sound tableview exists")
+        
+        let tableCells = soundTableView.cells
+        
+        if tableCells.count > 0 {
+            let count: Int = (tableCells.count-1)
+            let promise = expectation(description: "Wait for table cells")
+            for i in stride(from: 0, to: count, by: 1){
+                let tableCell = tableCells.element(boundBy: i)
+                XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
+                tableCell.tap()
+                XCTAssertEqual(app.layoutItems["soundName"].label,tableCell.textViews.accessibilityLabel)
+                if i == (count - 1 ){
+                    promise.fulfill()
+                }
+                //Back
+                app.navigationBars.buttons.element(boundBy: 0).tap()
+                
+            }
+            waitForExpectations(timeout: 20, handler: nil)
+            XCTAssertTrue(true, "Finished validating the table cells")
+        }
+        else {
+            XCTAssert(false, "Could not find any table cells")
+        }
+    }
+    func testDisplayMethod(){
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["Methods"].tap()
+        let methodTableView = app.tables["table--methodNames"]
+        
+        XCTAssert(methodTableView.exists, "The methods tableview exists")
+        
+        let tableCells = methodTableView.cells
+        
+        if tableCells.count > 0 {
+            let count: Int = (tableCells.count-1)
+            let promise = expectation(description: "Wait for table cells")
+            for i in stride(from: 0, to: count, by: 1){
+                let tableCell = tableCells.element(boundBy: i)
+                XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
+                tableCell.tap()
+                XCTAssertEqual(app.layoutItems["methodNames"].label,tableCell.textViews.accessibilityLabel)
+                if i == (count - 1 ){
+                    promise.fulfill()
+                }
+                //Back
+                app.navigationBars.buttons.element(boundBy: 0).tap()
+                
+            }
+            waitForExpectations(timeout: 20, handler: nil)
+            XCTAssertTrue(true, "Finished validating the table cells")
+        }
+        else {
+            XCTAssert(false, "Could not find any table cells")
+        }
+        
+    }
+    func testDisplayRepatDays(){
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["Repeat"].tap()
+        let repeatTableView = app.tables["table--repeatDays"]
+        
+        XCTAssert(repeatTableView.exists, "The repeat days tableview exists")
+        
+        let tableCells = repeatTableView.cells
+        
+        if tableCells.count > 0 {
+            let count: Int = (tableCells.count-1)
+            let promise = expectation(description: "Wait for table cells")
+            for i in stride(from: 0, to: count, by: 1){
+                let tableCell = tableCells.element(boundBy: i)
+                XCTAssertTrue(tableCell.exists, "The \(i) cell is in place on the table")
+                tableCell.tap()
+                XCTAssertEqual(app.layoutItems["repeatDays"].label,tableCell.textViews.accessibilityLabel)
+                if i == (count - 1 ){
+                    promise.fulfill()
+                }
+                //Back
+                app.navigationBars.buttons.element(boundBy: 0).tap()
+                
+            }
+            waitForExpectations(timeout: 20, handler: nil)
+            XCTAssertTrue(true, "Finished validating the table cells")
+        }
+        else {
+            XCTAssert(false, "Could not find any table cells")
+        }
+        
+    }
 }

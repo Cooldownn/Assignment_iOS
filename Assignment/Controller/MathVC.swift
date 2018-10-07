@@ -415,7 +415,10 @@ class MathVC: UIViewController {
         }
     }
     @IBAction func nextBtn(_ sender: Any) {
-        viewDidLoad()
+        if score == 1 {
+            Singleton.sharedInstance.stop()
+        }
+        self.performSegue(withIdentifier: "back", sender: self)
     }
     @IBAction func cancelBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

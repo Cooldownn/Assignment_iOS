@@ -341,6 +341,7 @@
                         <outlet property="questionLbl" destination="K4K-C7-STP" id="0nk-Wi-2rj"/>
                         <outlet property="resultLbl" destination="bBp-8i-iDL" id="CCr-W1-mRg"/>
                         <outlet property="scoreLbl" destination="uNp-s7-PH2" id="3EF-yO-wgo"/>
+                        <segue destination="Qhc-xw-ARE" kind="show" identifier="back" id="Die-lv-CL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fke-sC-Zi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -466,6 +467,7 @@
                     <connections>
                         <outlet property="newGameButton" destination="wwt-aN-iqe" id="vlm-aV-1mb"/>
                         <outlet property="statusLabel" destination="rX8-q3-0YO" id="9ln-G0-fSh"/>
+                        <segue destination="Qhc-xw-ARE" kind="show" identifier="back" id="3Fc-Zl-hYr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhM-zR-8j9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -803,6 +805,7 @@
                         <outlet property="imageView" destination="aAZ-ED-DhP" id="Q8L-fV-PhP"/>
                         <outlet property="imageView1" destination="nEf-Wh-MHq" id="eVY-W5-zPj"/>
                         <outlet property="mess" destination="T8S-E6-D3r" id="WeU-rk-irt"/>
+                        <segue destination="Qhc-xw-ARE" kind="show" identifier="back" id="F5K-9z-eJn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBu-nV-E4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1283,5 +1286,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p7D-I9-eTP"/>
+        <segue reference="F5K-9z-eJn"/>
     </inferredMetricsTieBreakers>
 </document>

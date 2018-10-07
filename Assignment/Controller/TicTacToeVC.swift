@@ -114,6 +114,8 @@ class TicTacToeVC: UIViewController {
                 if winner == 1 {
                     statusLabel.text = "You Won!"
                     statusLabel.textColor = UIColor.init(cgColor: #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1))
+                    Singleton.sharedInstance.stop()
+                    self.performSegue(withIdentifier: "back", sender: self)
                 }
                 else if winner == 2 {
                     statusLabel.text = "GG! Loser"

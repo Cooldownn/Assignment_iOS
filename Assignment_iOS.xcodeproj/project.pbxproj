@@ -45,6 +45,7 @@
 		E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2485DB42142019F00EAE371 /* AlarmPIC.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
 		E252064B214E891600AF9BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E252064A214E891600AF9BCE /* Main.storyboard */; };
+		E2B0E763216A0472000C8CC5 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0E762216A0472000C8CC5 /* Singleton.swift */; };
 		FC68C23E2147AC8F00EAA7C4 /* Apologize.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */; };
 		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		E2485DB42142019F00EAE371 /* AlarmPIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPIC.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
 		E252064A214E891600AF9BCE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E2B0E762216A0472000C8CC5 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Apologize.mp3; sourceTree = "<group>"; };
 		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
 				BFD978C021650562001E8057 /* Extension.swift */,
 				BFD978C2216505C6001E8057 /* NotificationExtension.swift */,
+				E2B0E762216A0472000C8CC5 /* Singleton.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				BFD978C3216505C6001E8057 /* NotificationExtension.swift in Sources */,
 				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
 				BF1DE8BF215AA9C4003D22A0 /* AlarmSet.swift in Sources */,
+				E2B0E763216A0472000C8CC5 /* Singleton.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
 				BF1DE8C7215AB707003D22A0 /* WeekdaysVC.swift in Sources */,
 				BFD978CB21651638001E8057 /* WeatherModel.swift in Sources */,

@@ -43,9 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
 //        let tictactoe:UIViewController! = AlarmPIC()
 //        showModally(tictactoe)
         var method:[Int] = []
+        var soundName:String = ""
         let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if let userInfo = notification.userInfo {
-//                        soundName = userInfo["soundName"] as! String
+                       soundName = userInfo["soundName"] as! String
 //                        index = userInfo["index"] as! Int
                         method = userInfo["method"] as! [Int]
                     }
@@ -62,6 +63,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }
+        else if method[0] == 3 {
+            let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "math") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
         else {
             let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "math") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -69,6 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
             self.window?.makeKeyAndVisible()
         }
         
+        Singleton.sharedInstance.playSound(soundName)
 //        let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "tictactoe") as UIViewController
 //                    self.window = UIWindow(frame: UIScreen.main.bounds)
 //                    self.window?.rootViewController = initialViewController
